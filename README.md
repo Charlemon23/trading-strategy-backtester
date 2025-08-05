@@ -1,24 +1,27 @@
-# Trading Strategy Backtester
+A professional-grade Python tool for backtesting multiple trading strategies with detailed performance metrics.
 
-A Python tool for evaluating historical trading strategies using moving average crossovers.  
-Designed for traders, analysts, and researchers to validate strategies before deployment.
+This framework reads OHLCV datasets from the **Market Data Pipeline** repository and simulates strategies including **SMA Crossover**, **Momentum**, **Mean Reversion**, and **Breakout**. It calculates risk-adjusted metrics and produces equity curve visualizations.
+
+---
 
 ## Features
-- Fetch historical OHLCV data from Yahoo Finance.
-- Compute short-term and long-term moving averages.
-- Generate buy/sell signals based on crossover logic.
-- Visualize price data with overlayed indicators.
-- Modular structure for adding new strategies.
+- **Multiple Strategies**:
+  - SMA Crossover
+  - Momentum
+  - Mean Reversion
+  - Breakout
+- **Risk Metrics**:
+  - Sharpe Ratio
+  - Max Drawdown
+  - CAGR
+- **Transaction Cost & Slippage Modeling**
+- **Equity Curve Visualization**
+- **Multi-Asset Ready**: Backtest any dataset in `/data/` from `market-data-pipeline`
 
-## Technologies
-- Python
-- pandas
-- NumPy
-- matplotlib
-- yfinance
+---
 
 ## Installation
-Clone the repository:
 ```bash
-git clone https://github.com/Charlemon23/trading-strategy-backtester.git
-cd trading-strategy-backtester
+git clone https://github.com/<your-username>/quant-strategy-backtester.git
+cd quant-strategy-backtester
+pip install -r requirements.txt
